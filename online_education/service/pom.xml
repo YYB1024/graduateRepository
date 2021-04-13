@@ -120,5 +120,23 @@
             <version>4.12</version>
         </dependency>
     </dependencies>
+    <!--maven由于他的约定大于配置，我们之后再写配置，无法被导出或者生效的问题-->
+    <!--在build中配置resource，来防止我们资源导出失败的问题-->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 
 </project>
