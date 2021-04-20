@@ -1,6 +1,6 @@
 package com.study.eduService.controller;
 
-import com.study.utils.R;
+import com.study.oss.utils.R;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 

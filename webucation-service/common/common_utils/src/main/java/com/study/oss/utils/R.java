@@ -1,4 +1,4 @@
-package com.study.utils;
+package com.study.oss.utils;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.study.eduService.entity.EduTeacher;
 import com.study.eduService.entity.vo.TeacherQuery;
 import com.study.eduService.service.EduTeacherService;
-import com.study.utils.R;
+import com.study.oss.utils.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -140,6 +140,9 @@ public class EduTeacherController {
         if (!StringUtils.isEmpty(end)) {
             wrapper.le("gmt_create", end);
         }
+        /**按时间排序*/
+        wrapper.orderByDesc("gmt_create");
+
         /**3、调用方法实现分页*/
         teacherService.page(pageTeacher, wrapper);
 
